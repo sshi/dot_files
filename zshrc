@@ -29,9 +29,14 @@ setopt auto_pushd
 setopt correct
 setopt list_packed
 
-autoload predict-on
-predict-on
+# autoload predict-on
+# predict-on
 
 setopt noautoremoveslash
 
 alias ls="ls -G"
+
+# for screen
+preexec () {
+  [ ${STY} ] && echo -ne "\ek${1%% *}\e\\"
+}
