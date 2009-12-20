@@ -1,0 +1,6 @@
+escape ^Uu
+bind w windowlist -b
+startup_message off
+vbell off
+hardstatus alwayslastline "%{gk}%-w%{= wk}%n %t%{-}%+w %=%{gk}[$LANG] (%l) "
+
